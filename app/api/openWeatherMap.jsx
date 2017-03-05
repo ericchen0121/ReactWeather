@@ -13,7 +13,7 @@ module.exports = {
           location: res.data.name
         }
     }, function(res) {
-        throw new Error(res);
+        throw new Error('Unable to fetch weather for that location: ' + res.response.data.message);
     });
   }
 }
