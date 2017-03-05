@@ -13,8 +13,8 @@ var Nav = React.createClass({
           <ul className='menu'>
             <li className='menu-text'>React Weather</li>
             <li><IndexLink to='/' activeClassName='active' activeStyle={{fontWeight: 'bold', color: 'blue'}}>Get Weather</IndexLink></li>
-            <li><Link to='/about' activeClassName='active' activeStyle={{fontWeight: 'bold', color: 'blue'}}>About</Link></li>
-            <li><Link to='/examples' activeClassName='active' activeStyle={{fontWeight: 'bold', color: 'blue'}}>Examples</Link></li>
+            <li><Link to='/examples' activeClassName='active' activeStyle={{fontWeight: 'bold', color: 'blue'}}>Top Cities</Link></li>
+            <li><Link to='/about' activeClassName='active' activeStyle={{fontWeight: 'bold', color: 'blue'}}>About</Link></li>  
           </ul>
         </div>
         <div className='top-bar-right'>

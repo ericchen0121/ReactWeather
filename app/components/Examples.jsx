@@ -3,14 +3,20 @@ var {Link} = require('react-router')
 var Examples = () => {
   return (
     <div>
-      <h1 className='text-center'>Examples</h1>
+      <h1 className='text-center'>Top Cities</h1>
       <p>Here are a few example locations to try out:</p>
       <ol>
         <li>
-          <Link to='/?location=Philadelphia'>Philadelphia, PA</Link>
+          <Link to='/?location=San Francisco'>San Francisco, CA</Link>
         </li>
         <li>
-          <Link to='/?location=Rio'>Rio, Brazil</Link>
+          <Link to='/?location=Baltimore'>Baltimore, MD</Link>
+        </li>
+        <li>
+          <Link to='/?location=Taipei'>Taipei</Link>
+        </li>
+        <li>
+          <Link to='/?location=Paris'>Paris</Link>
         </li>
       </ol>
     </div>
