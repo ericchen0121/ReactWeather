@@ -15,7 +15,9 @@ var Weather = React.createClass({
 
     this.setState({
       isLoading: true,
-      errorMessage: undefined
+      errorMessage: undefined,
+      location: undefined,
+      temp: undefined
     });
 
     openWeatherMap.getTemp(location).then(function(data) {
@@ -31,6 +33,27 @@ var Weather = React.createClass({
         errorMessage: errorMessage.message
       })
     })
+  },
+
+  componentDidMount: function() {
+    // querystring parameter of url
+    var location = this.props.location.query.location;
+
+    if (location && location.length > 0) {
+      this.handleSearch(location);
+      window.location.hash = '#/'; // reset the querystring to root url
+    }
+  },
+  // when weather component is already loaded and receives new querystring
+  // this will take those new props and search the location for weather
+  //
+  componentWillReceiveProps: function(newProps) {
+    var location = newProps.location.query.location;
+
+    if (location && location.length > 0) {
+      this.handleSearch(location);
+      window.location.hash = '#/'; // reset the querystring to root url
+    }
   },
   render: function() {
     var {location, temp, isLoading, errorMessage, errorName} = this.state;
