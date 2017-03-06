@@ -44,8 +44,11 @@ var Weather = React.createClass({
       window.location.hash = '#/'; // reset the querystring to root url
     }
   },
-  // when weather component is already loaded and receives new querystring
-  // this will take those new props and search the location for weather
+  //
+  // react-router is the parent of weather container component
+  // when the querystring is updated (thru navbar search), react-router passes
+  // down new updated props to the weather component. componentWillReceiveProps
+  // allows us to listen for those new props and search the location for weather
   //
   componentWillReceiveProps: function(newProps) {
     var location = newProps.location.query.location;
