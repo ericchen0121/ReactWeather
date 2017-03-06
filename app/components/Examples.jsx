@@ -13,6 +13,9 @@ var Examples = () => {
           <Link to='/?location=Baltimore'>Baltimore, MD</Link>
         </li>
         <li>
+          <Link to='/?location=Seoul'>Seoul</Link>
+        </li>
+        <li>
           <Link to='/?location=Taipei'>Taipei</Link>
         </li>
         <li>
